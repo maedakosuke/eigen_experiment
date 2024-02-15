@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.25)
+project(your_name LANGUAGES C CXX)
+include(../fetch_eigen.cmake)
+add_executable(${CMAKE_PROJECT_NAME} main.cpp)
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${EIGEN_INCLUDE_DIR})
